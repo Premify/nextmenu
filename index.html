@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menü Navigation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        margin: 60px 0 40px;
+        text-align: center;
+    }
+    .menu {
+        background-color: #ffffff;
+        border: 1px solid #d4d4d4;
+        list-style-type: none;
+        margin: 50px auto 80px;
+        padding: 0;
+        max-width: 400px;
+    }
+    .menu > li {
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .menu li a {
+        color: black;
+        display: block;
+        padding: 8px 20px;
+        text-decoration: none;
+    }
+    .menu > li  > ul > li {
+        font-weight: normal;
+        font-size: 1em;
+    }
+    .menu > li  > ul > li > ul > li {
+        font-size: 0.9em;
+    }
+    .menu > li  > ul > li > ul > li > ul > li{
+        font-size: 0.9em;
+    }
+    .menu li a:hover, .menu li a:active {
+        background-color: #EFF0FD;
+    }
+    .submenu {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+    }
+
+
+    .submenu.active {
+        display: block;
+    }
+
+
+    .submenu li {
+        background-color: #fff;
+        border-bottom: 1px solid #eaeaea;
+        padding-left: 20px;
+    }
+    .submenu li a:hover {
+        background-color: rgb(230, 230, 255);
+    }
+
+    .icon {
+        margin-left: 50px; /* Add space before the icon */
+        display: inline-block;
+        transition: transform 0.3s; /* Smooth transition for the icon */
+        float: right;
+        font-size: 0.9em;
+    }
+
+    .submenu.active + a .icon { /* Selects the icon when the submenu is active */
+        transform: rotate(90deg); /* Rotates the icon */
+    }
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>NextGen Menu - Proposal</h1>
+    </div>
+    <ul class="menu">
+        <li><a href="#">Dein System einrichten<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Firmendaten</a></li>
+                <li><a href="#">Nummernkreise<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Zentraler Nummernkreis</a></li>
+                        <li><a href="#">Nummernkreise pro Projekt</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">E-Mail<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">E-Mail Konten</a></li>
+                        <li><a href="#">E-Mail Vorlagen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Belege<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Briefkopf</a></li>
+                        <li><a href="#">Belege Infoboxen</a></li>
+                        <li><a href="#">Textvorlagen</a></li>
+                        <li><a href="#">Übersetzungen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Projekte<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Projekte verwalten</a></li>
+                        <li><a href="#">Grundeinstellungen pro Projekt</a></li>
+                        <li><a href="#">Dateien pro Projekt</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Benutzer<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Benutzer verwalten</a></li>
+                        <li><a href="#">Benutzervorlagen</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Stammdaten<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Adressen<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Gruppen</a></li>
+                        <li><a href="#">Sprachenliste</a></li>
+                        <li><a href="#">Länderliste</a></li>
+                        <li><a href="#">Adresse Typ</a></li>
+                        <li><a href="#">Bundesstaaten</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Artikel<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Kategorien</a></li>
+                        <li><a href="#">Artikelbaum</a></li>
+                        <li><a href="#">Fremdnummern</a></li>
+                        <li><a href="#">Einheiten</a></li>
+                        <li><a href="#">Eigenschaften<span class="icon">></span></a>
+                            <ul class="submenu">
+                                <li><a href="#">Eigenschaften verwalten</a></li>
+                                <li><a href="#">Eigenschaften Vorlagen</a></li>
+                                <li><a href="#">Eigenschaften Übersetzungen</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Erweiterte Rabatte</a></li>
+                        <li><a href="#">Crossselling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Benutzerdefinierte Felder</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Verkaufen<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Shops und Marktplätze<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Shops / Marktplätze Übersicht</a></li>
+                        <li><a href="#">Shopify Connector New</a></li>
+                        <li><a href="#">WooCommerce Connector New</a></li>
+                        <li><a href="#">Amazon Seller App</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">​Belege Vorlagen</a></li>
+                <li><a href="#">Kasse (POS)<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">POS Einstellungen pro Projekt</a></li>
+                        <li><a href="#">POS Konfiguration (Kassierer)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Lager & Logistik<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Lager<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Lagerverwaltung</a></li>
+                        <li><a href="#">Wareneingang</a></li>
+                        <li><a href="#">Retouren Gründe</a></li>
+                        <li><a href="#">Etiketten</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Logistik<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Logistik Einstellungen pro Projekt</a></li>
+                        <li><a href="#">Drucker</a></li>
+                        <li><a href="#">Picklisten Profile</a></li>
+                        <li><a href="#">Klärungsfälle für das Versandzentrum</a></li>
+                        <li><a href="#">Übertragungsmodul</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Versand<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Paketmarken</a></li>
+                        <li><a href="#">Versandregeln</a></li>
+                        <li><a href="#">Versand aufsplitten</a></li>
+                        <li><a href="#">Lieferbedingungen</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Einkauf<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Erweiterter Bestellvorschlag</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Buchhaltung<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Zahlungen und Geschäftskonten<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Bank & Zahlungskonten </a></li>
+                        <li><a href="#">Zahlungsweisen</a></li>
+                        <li><a href="#">Zahlungsbedingungen</a></li>
+                        <li><a href="#">Mahnwesen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Steuer und Währung<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Steuer/Währung</a></li>
+                        <li><a href="#">Steuersätze</a></li>
+                        <li><a href="#">Währungskurse</a></li>
+                        <li><a href="#">Lieferschwelle</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">DATEV<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">DATEV Connect Online</a></li>
+                        <li><a href="#">DATEV ASCII Format</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Buchhaltungskonten<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Kontenrahmen</a></li>
+                        <li><a href="#">​Kostenstellen</a></li>
+                        <li><a href="#">Verbindlichkeiten</a></li>
+                        <li><a href="#">Sammeldebitoren</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Buchhaltung Einstellungen pro Projekt</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Team<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Tickets Inbox<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Inbox - Vorlagen </a></li>
+                        <li><a href="#">Inbox - Warteschlangen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Wiedervorlage</a></li>
+                <li><a href="#">Zeiterfassung - Vorlagen</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Administration<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">Prozessstarter</a></li>
+                <li><a href="#">Systemeinstellungen</a></li>
+                <li><a href="#">Labels</a></li>
+                <li><a href="#">Pflichtfelder</a></li>
+                <li><a href="#">Systemzustand</a></li>
+                <li><a href="#">Protokolle</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Integrationen<span class="icon">></span></a>
+            <ul class="submenu">
+                <li><a href="#">APIs</a></li>
+                <li><a href="#">OAuth</a></li>
+                <li><a href="#">Webhooks</a></li>
+            </ul>
+        </li>
+    </ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Event-Listener für die Menüpunkte der obersten Ebene
+    var topMenuItems = document.querySelectorAll('.menu > li > a');
+    topMenuItems.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var parentLi = this.parentNode;
+            toggleSubmenu(parentLi);
+        });
+    });
+
+    // Event-Listener für die Menüpunkte der zweiten Ebene
+    var secondLevelMenuItems = document.querySelectorAll('.menu .submenu > li > a');
+    secondLevelMenuItems.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var parentLi = this.parentNode;
+            toggleSubmenu(parentLi);
+        });
+    });
+
+    // Funktion zum Umschalten des Untermenüs
+    function toggleSubmenu(listItem) {
+        var submenu = listItem.querySelector('.submenu');
+        if (submenu) {
+            submenu.classList.toggle('active');
+        }
+
+        // Entfernen der Logik, die andere Untermenüs auf der gleichen Ebene schließt
+        // Diese Änderung bewirkt, dass Untermenüs geöffnet bleiben, auch wenn andere Elemente angeklickt werden.
+    }
+
+    function toggleSubmenu(listItem) {
+    var submenu = listItem.querySelector('.submenu');
+    if (submenu) {
+        submenu.classList.toggle('active');
+        var icon = listItem.querySelector('.icon');
+        if (submenu.classList.contains('active')) {
+            icon.textContent = 'v'; // Change to downward triangle when open
+        } else {
+            icon.textContent = '>'; // Change back to '>' when closed
+        }
+    }
+}
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>
