@@ -1,86 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menü Navigation</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    h1 {
-        margin: 60px 0 40px;
-        text-align: center;
-    }
-    .menu {
-        background-color: #ffffff;
-        border: 1px solid #d4d4d4;
-        list-style-type: none;
-        margin: 50px auto 80px;
-        padding: 0;
-        max-width: 400px;
-    }
-    .menu > li {
-        background-color: #fff;
-        border-bottom: 1px solid #d4d4d4;
-        font-size: 1.2em;
-        font-weight: bold;
-    }
-    .menu li a {
-        color: black;
-        display: block;
-        padding: 13px 20px;
-        text-decoration: none;
-    }
-    .menu > li  > ul > li {
-        font-weight: normal;
-        font-size: 1em;
-    }
-    .menu > li  > ul > li > ul > li {
-        font-size: 0.9em;
-    }
-    .menu > li  > ul > li > ul > li > ul > li{
-        font-size: 0.9em;
-    }
-    .menu li a:hover, .menu li a:active {
-        background-color: #EFF0FD;
-    }
-    .submenu {
-        display: none;
-        list-style-type: none;
-        padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: #ffffff;
+            border: 1px solid #d4d4d4;
+            list-style-type: none;
+            margin: 50px auto 80px;
+            padding: 0;
+            max-width: 400px;
+        }
+
+        .menu>li {
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .menu li a {
+            color: black;
+            display: block;
+            padding: 13px 20px;
+            text-decoration: none;
+        }
+
+        .menu>li>ul>li {
+            font-weight: normal;
+            font-size: 1em;
+        }
+
+        .menu>li>ul>li>ul>li {
+            font-size: 0.9em;
+        }
+
+        .menu>li>ul>li>ul>li>ul>li {
+            font-size: 0.9em;
+        }
+
+        .menu li a:hover,
+        .menu li a:active {
+            background-color: #EFF0FD;
+        }
+
+        .submenu {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+        }
 
 
-    .submenu.active {
-        display: block;
-    }
+        .submenu.active {
+            display: block;
+        }
 
 
-    .submenu li {
-        background-color: #fff;
-        border-bottom: 1px solid #d9d9d9;
-        padding-left: 20px;
-    }
-    .submenu li a:hover {
-        background-color: rgb(230, 230, 255);
-    }
+        .submenu li {
+            background-color: #fff;
+            border-bottom: 1px solid #d9d9d9;
+            padding-left: 20px;
+        }
 
-    .icon {
-        margin-left: 50px; /* Add space before the icon */
-        display: inline-block;
-        transition: transform 0.3s; /* Smooth transition for the icon */
-        float: right;
-        font-size: 0.9em;
-    }
+        .submenu li a:hover {
+            background-color: rgb(230, 230, 255);
+        }
 
-    .submenu.active + a .icon { /* Selects the icon when the submenu is active */
-        transform: rotate(90deg); /* Rotates the icon */
-    }
+        .icon {
+            margin-left: 50px;
+            /* Add space before the icon */
+            display: inline-block;
+            transition: transform 0.3s;
+            /* Smooth transition for the icon */
+            float: right;
+            font-size: 0.9em;
+        }
 
-</style>
+        .submenu.active+a .icon {
+            /* Selects the icon when the submenu is active */
+            transform: rotate(90deg);
+            /* Rotates the icon */
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
         <h1>NextGen Menu - Proposal</h1>
@@ -88,89 +103,132 @@
     <ul class="menu">
         <li><a href="#">Grundeinstellungen<span class="icon">></span></a>
             <ul class="submenu">
-                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=company-data">Firmendaten</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=company-data"
+                        target="_blank">Firmendaten</a></li>
                 <li><a href="#">Nummernkreise<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Zentraler Nummernkreis</a></li>
-                        <li><a href="#">Nummernkreise pro Projekt</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=number-circles"
+                                target="_blank">Zentraler Nummernkreis</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=number-ranges-per-project&advanced-settings=false"
+                                target="_blank">Nummernkreise pro Projekt</a></li>
                     </ul>
                 </li>
                 <li><a href="#">E-Mail<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">E-Mail Konten</a></li>
-                        <li><a href="#">E-Mail Vorlagen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=email-accounts&advanced-settings=false"
+                                target="_blank">E-Mail Konten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=email-templates&advanced-settings=false"
+                                target="_blank">E-Mail Vorlagen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=email&advanced-settings=false"
+                                target="_blank">Standard-E-Mail-Einstellungen</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Belege<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Briefkopf</a></li>
-                        <li><a href="#">Belege Infoboxen</a></li>
-                        <li><a href="#">Textvorlagen</a></li>
-                        <li><a href="#">Übersetzungen</a></li>
-                        <li><a href="#">​Belege Vorlagen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=business-letter-design&advanced-settings=false"
+                                target="_blank">Briefkopf</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=document-settings&advanced-settings=false"
+                                target="_blank">Belege Infoboxen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=text-templates&advanced-settings=false"
+                                target="_blank">Textvorlagen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=uebersetzung&action=list"
+                                target="_blank">Übersetzungen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=belegevorlagen&action=list"
+                                target="_blank">​Belege Vorlagen</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Projekte</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=sales-channels-projects"
+                        target="_blank">Projekte</a></li>
                 <li><a href="#">Benutzer<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Benutzer verwalten</a></li>
-                        <li><a href="#">Benutzervorlagen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=manage-users"
+                                target="_blank">Benutzer verwalten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=user-template"
+                                target="_blank">Benutzervorlagen</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Drucker</a></li>
+                <li><a href="#">Drucker<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=printer-connections"
+                                target="_blank">Drucker einrichten (NextGen)</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=print-jobs"
+                                target="_blank">Druckaufträge</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=printer-setup"
+                                target="_blank">Druckereinrichtung</a></li>
+                    </ul>
+                </li>
             </ul>
         </li>
         <li><a href="#">Stammdaten<span class="icon">></span></a>
             <ul class="submenu">
                 <li><a href="#">Adressen<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Gruppen</a></li>
-                        <li><a href="#">Sprachenliste</a></li>
-                        <li><a href="#">Länderliste</a></li>
-                        <li><a href="#">Bundesstaaten</a></li>
-                        <li><a href="#">Adresse Typ</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=gruppen&action=list"
+                                target="_blank">Gruppen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=sprachen&action=list"
+                                target="_blank">Sprachenliste</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=laender&action=list"
+                                target="_blank">Länderliste</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=bundesstaaten&action=list"
+                                target="_blank">Bundesstaaten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=adresse_typ&action=list"
+                                target="_blank">Adresse Typ</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Artikel<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Kategorien</a></li>
-                        <li><a href="#">Artikelbaum</a></li>
-                        <li><a href="#">Einheiten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=artikelkategorien&action=list"
+                                target="_blank">Kategorien</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=artikelbaum&action=list"
+                                target="_blank">Artikelbaum</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=artikeleinheit&action=list"
+                                target="_blank">Einheiten</a></li>
                         <li><a href="#">Eigenschaften<span class="icon">></span></a>
                             <ul class="submenu">
-                                <li><a href="#">Eigenschaften verwalten</a></li>
-                                <li><a href="#">Eigenschaften Vorlagen</a></li>
-                                <li><a href="#">Eigenschaften Übersetzungen</a></li>
+                                <li><a href="https://devmvp.staging.xentral.com/new/x1?module=artikeleigenschaften&action=list"
+                                        target="_blank">Eigenschaften verwalten</a></li>
+                                <li><a href="https://devmvp.staging.xentral.com/new/x1?module=eigenschaften_vorlagen&action=list"
+                                        target="_blank">Eigenschaften Vorlagen</a></li>
+                                <li><a href="https://devmvp.staging.xentral.com/new/x1?module=propertytranslation&action=list"
+                                        target="_blank">Eigenschaften Übersetzungen</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Erweiterte Rabatte</a></li>
-                        <li><a href="#">Crossselling</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=rabatte&action=list"
+                                target="_blank">Erweiterte Rabatte</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=crossselling&action=list"
+                                target="_blank">Crossselling</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Import & Export<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Import von Unternehmensdaten</a></li>
-                        <li><a href="#">Export von Unternehmensdaten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=importvorlage&action=uebersicht"
+                                target="_blank">Import von Unternehmensdaten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/index.php?module=exportvorlage&action=list"
+                                target="_blank">Export von Unternehmensdaten</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Benutzerdefinierte Felder</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=custom-fields"
+                        target="_blank">Benutzerdefinierte Felder</a></li>
             </ul>
         </li>
         <li><a href="#">Verkaufen<span class="icon">></span></a>
             <ul class="submenu">
                 <li><a href="#">Shops und Marktplätze<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Shops / Marktplätze Übersicht</a></li>
-                        <li><a href="#">Shopify Connector New</a></li>
-                        <li><a href="#">WooCommerce Connector New</a></li>
-                        <li><a href="#">Amazon Seller App</a></li>
-                        <li><a href="#">Ebay App</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=order-management&submenu=online-shops"
+                                target="_blank">Shops / Marktplätze Übersicht</a></li>
+                        <li><a href="#" target="_blank">Shopify Connector New</a></li>
+                        <li><a href="#" target="_blank">WooCommerce Connector New</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=integrations&submenu=amazon-seller-app"
+                                target="_blank">Amazon Seller App</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Kasse (POS)<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">POS Einstellungen pro Projekt</a></li>
-                        <li><a href="#">POS Konfiguration (Kassierer)</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=point-of-sale&advanced-settings=false"
+                                target="_blank">POS Einstellungen pro Projekt</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=pos_kassierer&action=list"
+                                target="_blank">POS Konfiguration (Kassierer)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -179,153 +237,204 @@
             <ul class="submenu">
                 <li><a href="#">Lager<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Lagerverwaltung</a></li>
-                        <li><a href="#">Wareneingang</a></li>
-                        <li><a href="#">Retouren Gründe</a></li>
-                        <li><a href="#">Etiketten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=warehouse-management"
+                                target="_blank">Lagerverwaltung</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=good-receiptment"
+                                target="_blank">Wareneingang</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=rma_vorlagen&action=list"
+                                target="_blank">Retouren Gründe</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=labels"
+                                target="_blank">Etiketten</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Logistik<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Logistik Einstellungen pro Projekt</a></li>
-                        <li><a href="#">Picklisten Profile</a></li>
-                        <li><a href="#">Klärungsfälle für das Versandzentrum</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=logistics"
+                                target="_blank">Logistik Einstellungen pro Projekt</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=picklist-rule-designer"
+                                target="_blank">Picklisten Profile</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=problem-cases-for-shipment-center"
+                                target="_blank">Klärungsfälle für das Versandzentrum</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Versand<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Paketmarken</a></li>
-                        <li><a href="#">Versandregeln</a></li>
-                        <li><a href="#">Versand aufsplitten</a></li>
-                        <li><a href="#">Lieferbedingungen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=carrier"
+                                target="_blank">Paketmarken</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=shipment-rules"
+                                target="_blank">Versandregeln</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=shippingtaxsplit&action=list"
+                                target="_blank">Versand aufsplitten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=lieferbedingungen&action=list"
+                                target="_blank">Lieferbedingungen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Produktion<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=production-workflow"
+                                target="_blank">Produktion Workflow</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=inventory-and-fulfillment&submenu=production-center"
+                                target="_blank">Produktionszentrum</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <li><a href="#">Einkauf<span class="icon">></span></a>
             <ul class="submenu">
-                <li><a href="#">Erweiterter Bestellvorschlag</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=procurement&submenu=extended-purchase-suggestions"
+                        target="_blank">Erweiterter Bestellvorschlag</a></li>
             </ul>
         </li>
         <li><a href="#">Buchhaltung<span class="icon">></span></a>
             <ul class="submenu">
                 <li><a href="#">Zahlungen und Geschäftskonten<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Bank & Zahlungskonten </a></li>
-                        <li><a href="#">Zahlungsweisen</a></li>
-                        <li><a href="#">Zahlungsbedingungen</a></li>
-                        <li><a href="#">Mahnwesen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=bank-and-payment-accounts"
+                                target="_blank">Bank & Zahlungskonten </a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=payment-methods"
+                                target="_blank">Zahlungsweisen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=payment-methods-global"
+                                target="_blank">Zahlungsbedingungen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=dunning-system"
+                                target="_blank">Mahnwesen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=swissqrinvoice"
+                                target="_blank">SwissQR</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Steuer und Währung<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Steuer/Währung</a></li>
-                        <li><a href="#">Steuersätze</a></li>
-                        <li><a href="#">Währungskurse</a></li>
-                        <li><a href="#">Lieferschwelle</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=tax-currency"
+                                target="_blank">Steuer/Währung</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=tax-rates"
+                                target="_blank">Steuersätze</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=currencies"
+                                target="_blank">Währungskurse</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/x1?module=lieferschwelle&action=list"
+                                target="_blank">Lieferschwelle</a></li>
                     </ul>
                 </li>
                 <li><a href="#">DATEV<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">DATEV Connect Online</a></li>
-                        <li><a href="#">DATEV ASCII Format</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=datev-unternehmen-online"
+                                target="_blank">DATEV Connect Online</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=datev-ascii-format"
+                                target="_blank">DATEV ASCII Format</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Buchhaltungskonten<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Kontenrahmen</a></li>
-                        <li><a href="#">​Kostenstellen</a></li>
-                        <li><a href="#">Verbindlichkeiten</a></li>
-                        <li><a href="#">Sammeldebitoren</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=account-system"
+                                target="_blank">Kontenrahmen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=cost-centers"
+                                target="_blank">​Kostenstellen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=liabilities"
+                                target="_blank">Verbindlichkeiten</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=collection-debitors"
+                                target="_blank">Sammeldebitoren</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Buchhaltung Einstellungen pro Projekt</a></li>
+                <li><a
+                        href="https://devmvp.staging.xentral.com/new/settings?menu=payment-and-accounting&submenu=tax-and-currency">Buchhaltung
+                        Einstellungen pro Projekt</a></li>
             </ul>
         </li>
         <li><a href="#">Team<span class="icon">></span></a>
             <ul class="submenu">
                 <li><a href="#">Tickets Inbox<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Inbox - Vorlagen </a></li>
-                        <li><a href="#">Inbox - Warteschlangen</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=team&submenu=inbox-templates"
+                                target="_blank">Inbox - Vorlagen </a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=team&submenu=inbox-templates"
+                                target="_blank">Inbox - Warteschlangen</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Wiedervorlage</a></li>
-                <li><a href="#">Zeiterfassung - Vorlagen</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=team&submenu=inbox-templates"
+                        target="_blank">Wiedervorlage</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=team&submenu=inbox-templates"
+                        target="_blank">Zeiterfassung - Vorlagen</a></li>
             </ul>
         </li>
         <li><a href="#">Administration<span class="icon">></span></a>
             <ul class="submenu">
-                <li><a href="#">Prozessstarter</a></li>
-                <li><a href="#">Systemeinstellungen</a></li>
-                <li><a href="#">Labels</a></li>
-                <li><a href="#">Pflichtfelder</a></li>
-                <li><a href="#">Systemzustand</a></li>
-                <li><a href="#">Protokolle</a></li>
-                <li><a href="#">Datenaustausch<span class="icon">></span></a>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=cron-jobs-process-starter"
+                        target="_blank">Prozessstarter</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=setup-your-system&submenu=system-settings"
+                        target="_blank">Systemeinstellungen</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/x1?module=datatablelabels&action=list"
+                        target="_blank">Labels</a></li>
+                <li><a href="https://devmvp.staging.xentral.com/new/x1?module=mandatoryfields&action=list"
+                        target="_blank">Pflichtfelder</a></li>
+                <li><a href="#" target="_blank">System Analyse<span class="icon">></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Übertragungen (CSV/XML/EDI/PDF)</a></li>
-                        <li><a href="#">APIs</a></li>
-                        <li><a href="#">OAuth</a></li>
-                        <li><a href="#">Webhooks</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=system-health"
+                                target="_blank">Systemzustand</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=protocol"
+                                target="_blank">Protokolle</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=logs"
+                                target="_blank">Logs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" target="_blank">Datenaustausch<span class="icon">></span></a>
+                    <ul class="submenu">
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=transfer-module"
+                                target="_blank">Übertragungen (CSV/XML/EDI/PDF)</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=apis"
+                                target="_blank">APIs</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=administration&submenu=oauth"
+                                target="_blank">OAuth</a></li>
+                        <li><a href="https://devmvp.staging.xentral.com/new/settings?menu=integrations&submenu=webhooks"
+                                target="_blank">Webhooks</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
     </ul>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Event-Listener für die Menüpunkte der obersten Ebene
-    var topMenuItems = document.querySelectorAll('.menu > li > a');
-    topMenuItems.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var parentLi = this.parentNode;
-            toggleSubmenu(parentLi);
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Event-Listener für die Menüpunkte der obersten Ebene
+            var topMenuItems = document.querySelectorAll('.menu > li > a');
+            topMenuItems.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    if (this.parentNode.querySelector('.submenu')) {
+                        event.preventDefault();
+                        toggleSubmenu(this.parentNode);
+                    }
+                });
+            });
+
+            // Event-Listener für die Menüpunkte der zweiten Ebene
+            var secondLevelMenuItems = document.querySelectorAll('.menu .submenu > li > a');
+            secondLevelMenuItems.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    if (this.parentNode.querySelector('.submenu')) {
+                        event.preventDefault();
+                        toggleSubmenu(this.parentNode);
+                    }
+                });
+            });
+
+            // Funktion zum Umschalten des Untermenüs
+            function toggleSubmenu(listItem) {
+                var submenu = listItem.querySelector('.submenu');
+                if (submenu) {
+                    submenu.classList.toggle('active');
+                    var icon = listItem.querySelector('.icon');
+                    if (submenu.classList.contains('active')) {
+                        icon.textContent = 'v'; // Change to downward triangle when open
+                    } else {
+                        icon.textContent = '>'; // Change back to '>' when closed
+                    }
+                }
+            }
         });
-    });
-
-    // Event-Listener für die Menüpunkte der zweiten Ebene
-    var secondLevelMenuItems = document.querySelectorAll('.menu .submenu > li > a');
-    secondLevelMenuItems.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var parentLi = this.parentNode;
-            toggleSubmenu(parentLi);
-        });
-    });
-
-    // Funktion zum Umschalten des Untermenüs
-    function toggleSubmenu(listItem) {
-        var submenu = listItem.querySelector('.submenu');
-        if (submenu) {
-            submenu.classList.toggle('active');
-        }
-
-        // Entfernen der Logik, die andere Untermenüs auf der gleichen Ebene schließt
-        // Diese Änderung bewirkt, dass Untermenüs geöffnet bleiben, auch wenn andere Elemente angeklickt werden.
-    }
-
-    function toggleSubmenu(listItem) {
-    var submenu = listItem.querySelector('.submenu');
-    if (submenu) {
-        submenu.classList.toggle('active');
-        var icon = listItem.querySelector('.icon');
-        if (submenu.classList.contains('active')) {
-            icon.textContent = 'v'; // Change to downward triangle when open
-        } else {
-            icon.textContent = '>'; // Change back to '>' when closed
-        }
-    }
-}
-
-});
 
 
 
 
-</script>
+
+    </script>
 
 </body>
+
 </html>
